@@ -66,7 +66,7 @@ def prompt_gen(p,h,l):
     elif l=='contradiction':
         prompt = f"Explain why {p} cannot be true when {h} is true and vice versa?"
     else: #neutral
-        prompt = f"Explain why {p} is not related to {h}?"
+        prompt = f"Explain why there is no evidence that if {p} is related to {h}?"
     return prompt
 
 def text_gen(p,h,lab, length, temp, top_k, top_p, ngram):
