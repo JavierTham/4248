@@ -62,11 +62,11 @@ model.config.pad_token_id = tokenizer.eos_token_id
 
 def prompt_gen(p,h,l):
     if l=='entailment':
-        prompt = f"Explain why {p} has to be TRUE when {h} is TRUE?"
+        prompt = f"Explain why {p} has to be true when {h} is true?"
     elif l=='contradiction':
-        prompt = f"Explain why {p} CANNOT be TRUE when {h} is TRUE and vice versa?"
+        prompt = f"Explain why {p} cannot be true when {h} is true and vice versa?"
     else: #neutral
-        prompt = f"Explain why {p} is NOT RELATED to {h}?"
+        prompt = f"Explain why {p} is not related to {h}?"
     return prompt
 
 def text_gen(p,h,lab, length, temp, top_k, top_p, ngram):
